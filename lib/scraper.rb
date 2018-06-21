@@ -22,6 +22,7 @@ class Scraper
     doc = Nokogiri::HTML(open(profile_url))
     binding.pry
     scraped_student = {}
+    scraped_student[:profile_quote] = doc.css(".profile_quote").text
     doc.css()
   end
 
