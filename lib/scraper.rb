@@ -36,9 +36,7 @@ class Scraper
         scraped_student[:blog] = link
       end
     end
-
-
-      if
+    scraped_student
   end
 
 end
