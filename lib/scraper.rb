@@ -23,6 +23,7 @@ class Scraper
     binding.pry
     scraped_student = {}
     scraped_student[:profile_quote] = doc.css(".profile_quote").text
+    scraped_student[:bio] = doc.css(".description-holder p").text
     doc.css()
   end
 
