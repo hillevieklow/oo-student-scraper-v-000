@@ -23,7 +23,6 @@ class Scraper
     binding.pry
     scraped_student = {}
     doc.css()
-
   end
 
 end
