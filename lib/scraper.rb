@@ -26,6 +26,16 @@ class Scraper
     scraped_student[:bio] = doc.css(".description-holder p").text
     doc.css(".social-icon-container a").each do |icon|
       link = "#{icon.attr("href")}"
+      if link.include?("twitter")
+       student_info[:twitter] = link
+     elsif link.include?("linkedin")
+       student_info[:linkedin] = link
+     elsif link.include?("github")
+       student_info[:github] = link
+     else
+       student_info[:blog] = link
+     end
+   end
   end
 
 end
