@@ -24,7 +24,8 @@ class Scraper
     scraped_student = {}
     scraped_student[:profile_quote] = doc.css(".profile_quote").text
     scraped_student[:bio] = doc.css(".description-holder p").text
-    doc.css()
+    doc.css(".social-icon-container a").each do |icon|
+      link = "#{icon.attr("href")}"
   end
 
 end
